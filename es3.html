@@ -1,21 +1,30 @@
 <html>
     <head>
         <title>JS Es 3</title>
+        <style>
+            table,td,th{border: 1px solid black};
+        </style>
     </head>
     <body>
-        <h1>JS exercise 3</h1>
-        <h2>Simple calculator with dynamic rendering and access to </h2>
-        <table style="border:solid">
-            <thead>
-                <th>N</th>
-            </thead>
+        <h1>es 3</h1><br>
+        <table id="tab">
+            <tr>
+                <th>
+                    Numero
+                </th>
+            </tr>
         </table>
-        Inserire un numero: <input type="text" name="numero"><br>
-        <input type="submit" value="invia"><br>
-        <div id="div1"></div>
+        <input type="text" id="num1">
+        <button id="btn1">add</button>
+        
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
 
+        <script>
+            $("#btn1").click(function(){
+                var n1 = parseInt($("#num1").val());
+                var string ="<tr><td>" + n1 + "</tr></td>";
+                $("#tab").append(string);
+            })
         </script>
     </body>
 </html>

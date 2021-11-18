@@ -3,7 +3,6 @@ for (let j = 0; j < localStorage.length; j++) {
 }
 
 var myStorage = window.localStorage;
-var i=0;
 
 $("button").click(function(){
     var input= $("#num1");
@@ -29,8 +28,7 @@ $("button").click(function(){
                 break;
         };
         var string ="<tr><td>" + n1 + "</td><td> "+ sign +" </td><td>"+ n2 +"</td><td>"+ tot +"</td></tr>";
-        localStorage.setItem(i, string); 
-        i=i+1;
+        localStorage.setItem(localStorage.length, string); 
         $("#tab").append(string);
         input.val("");
         input2.val("");
@@ -40,8 +38,6 @@ $("button").click(function(){
 
 /*
 $("#btn1").click(function(){ operation("+")});
-
-
 
 var operation = function (sign) {
     var input= $("#num1");
